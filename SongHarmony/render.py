@@ -237,5 +237,6 @@ class Render:
                 x = self.chord_size
                 y += self.y_size
                 
+        self.d.set_pixel_scale(2)  # Set number of pixels per geometry unit
         self.d.save_svg(out_name + '.svg')
         self.d.save_png(out_name + '.png')
