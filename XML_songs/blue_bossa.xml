@@ -1,0 +1,117 @@
+<song>
+    <title>Blue Bossa</title>
+    <composer>Kenny Dorham</composer>
+    <measures_per_line>4</measures_per_line>
+    <chords_per_measure>1</chords_per_measure>
+    <measures>
+        <!-- A Section -->
+        <measure>
+            <section>A</section>
+            <chord>
+                <root>C</root>
+                <specie>-7</specie>
+                <grade>i</grade>
+                <new_key>C Min</new_key>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>-7</specie>
+                <grade>iv</grade>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7b5</specie>
+                <grade>ii°</grade>
+                <ii_bracket>(5,0)</ii_bracket>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7(b13)</specie>
+                <grade>V</grade>
+                <v_i_arrow>(6,0)</v_i_arrow>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>-7</specie>
+                <grade>i</grade>
+            </chord>
+        </measure>
+        <measure/>
+                <!-- B Section -->
+        <measure>
+            <section>B</section>
+            <chord>
+                <root>Eb</root>
+                <specie>Maj7</specie>
+                <grade>ii</grade>
+                <new_key>Db Maj</new_key>
+                <old_key>C Min</old_key>
+                <ii_bracket>(9,0)</ii_bracket>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>Ab</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(10,0)</v_i_arrow>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>Db</root>
+                <specie>Maj7</specie>
+                <grade>I</grade>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7b5</specie>
+                <grade>iiº</grade>
+                <new_key>C Min</new_key>
+                <old_key>Db Maj</old_key>
+                <ii_bracket>(13,0)</ii_bracket>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(14,0)</v_i_arrow>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>-7</specie>
+                <grade>i</grade>
+            </chord>
+        </measure>
+        <measure>
+            <repeat_bar/>
+        </measure>
+    </measures>
+</song>
+
+<!-- http://danhaerle.com/Bluebossa.html
+Cmi7 - Tonic chord, normally Natural Minor (Aeolian)  but could be Dorian (Bb Major)
+Fmi7 - IV in minor should be Dorian (Eb Major) to sound normal
+DØ  - the normal half-diminished scale is Locrian (Eb Major)
+G7b9 - Should include alterations which predict the key signature of the Imi7 to follow. The two best choices are the 5th mode of Harmonic Minor (C Harmonic Minor) and G Super Locrian (Ab Melodic Minor)
+Ebmi7 - IImi7 should be Dorian to sound like the right key
+Ab7 - the largest variety of choices, any dominant 7th scale (except Minor Blues)
+Dbma7 - tonic function calls for Db Major scale, Db Lydian (Ab Major) could also be used
+-->
