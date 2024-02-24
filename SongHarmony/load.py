@@ -37,8 +37,19 @@ def load_song_from_xml(xml_path):
             
             measure.chords.append(chord)
         
+        if m.getElementsByTagName('init_bar'):
+            measure.init_bar = True
+        
         if m.getElementsByTagName('end_bar'):
             measure.end_bar = True
+        if m.getElementsByTagName('repeat_bar'):
+            measure.repeat_bar = True
+
+
+        if m.getElementsByTagName('first_end'):
+            measure.first_end = True
+        elif m.getElementsByTagName('second_end'):
+            measure.second_end = True
 
         song.measures.append(measure)
     
