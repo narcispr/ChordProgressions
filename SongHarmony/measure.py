@@ -6,6 +6,7 @@ class Measure:
         self.first_end = False
         self.second_end = False
         self.repeat_bar = False
+        self.section = None
     
     def get_str(self, chords_per_measure) -> str:
         ret = '| '

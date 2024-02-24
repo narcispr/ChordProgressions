@@ -16,6 +16,9 @@ def load_song_from_xml(xml_path):
     measures = dom.getElementsByTagName('measure')
     for m in measures:
         measure = Measure()
+        elements = m.getElementsByTagName('section')
+        if elements:
+            measure.section = elements[0].childNodes[0].data
         chords = m.getElementsByTagName('chord')
         for c in chords:
             root = c.getElementsByTagName('root')[0].childNodes[0].data

@@ -17,7 +17,7 @@ class Render:
         self.bracket_offset_x = 12
         self.bracket_offset_y = 30
         self.arrow_offset_y = -30
-        self.new_key_offset = -20
+        self.new_key_offset = -23
         
         
         self.d = draw.Drawing((song.measure_per_line+1)*self.chord_size*song.chords_per_measure, 
@@ -96,7 +96,15 @@ class Render:
             self.d.append(draw.Text(":", int(self.text_size), 
                                     x-self.chord_size/4 + self.text_size/2, y-self.measure_size/2, 
                                     stroke='black', center=True))
-    
+    def __draw_section__(self, x, y, section): 
+        # draw section inside a rectangle
+        self.d.append(draw.Rectangle(x-self.chord_size/4 - self.text_size*0.5, y-self.measure_size*1.8,
+                                    self.text_size*1, self.text_size*0.9, 
+                                    stroke='grey', stroke_width=1, fill='lightgrey'))
+        
+        self.d.append(draw.Text(section, int(self.text_size*0.75), 
+                                x-self.chord_size/4, y-self.measure_size*1.4,
+                                stroke='grey', center=True))
         
     def __draw__root__(self, x, y, root):
         self.d.append(draw.Text(root, self.text_size, x, y, font_weight='bold', center=False))
@@ -130,7 +138,8 @@ class Render:
             offset = chords_offset * self.chord_size
             self.__drawCurvedArrow__(x, y, offset, type=0, is_dashed=is_dashed)
         elif line_offset == 1:
-            offset = ((self.song.measure_per_line * self.song.chords_per_measure) - (current[0] * self.song.chords_per_measure + current[1])) * self.chord_size - self.chord_size/4
+            offset = ((self.song.measure_per_line * self.song.chords_per_measure) - ((current[0]  % self.song.measure_per_line) * self.song.chords_per_measure + current[1])) 
+            offset = offset * self.chord_size
             self.__drawCurvedArrow__(x, y, offset, type=1, is_dashed=is_dashed)
             offset = chords_offset * self.chord_size + self.chord_size/2
             self.__drawCurvedArrow__(self.chord_size/2, y + self.y_size, offset, type=2, is_dashed=is_dashed)
@@ -187,7 +196,8 @@ class Render:
         y = 1.5*self.y_size
         for i, m in enumerate(self.song.measures):
             self.__draw_init_bar__(x, y, m.init_bar)
-            
+            if m.section is not None:
+                self.__draw_section__(x, y, m.section)
             if m.first_end:
                 self.__draw_n_ending__(x, y, 1) 
             elif m.second_end:
@@ -219,8 +229,8 @@ class Render:
                         if m.chords[c].new_key is not None:
                             self.__draw_new_key__(x, y, m.chords[c].new_key)
                         # Old key
-                        if m.chords[c].old_key is not None:
-                            self.__draw_old_key__(x, y, m.chords[c].old_key)
+                        # if m.chords[c].old_key is not None:
+                        #     self.__draw_old_key__(x, y, m.chords[c].old_key)
 
                     x += self.chord_size
 
@@ -236,7 +246,7 @@ class Render:
                                         stroke='black', stroke_width=2))
                 x = self.chord_size
                 y += self.y_size
-                
+
         self.d.set_pixel_scale(2)  # Set number of pixels per geometry unit
         self.d.save_svg(out_name + '.svg')
         self.d.save_png(out_name + '.png')
