@@ -1,2 +1,2 @@
-# Change log
-
+- Add repetition bars and symbols
+- Initial commit
