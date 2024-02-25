@@ -10,8 +10,7 @@ class Chord():
         self.subii_bracket = None
         self.v_i_arrow = None
         self.subv_i_arrow = None
-        self.down_comment = None
-        self.up_comment = None
+        self.scale = []
         
     def __str__(self):
         return "{}{} ".format(self.root, self.type)

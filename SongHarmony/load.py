@@ -22,7 +22,11 @@ def load_song_from_xml(xml_path):
         chords = m.getElementsByTagName('chord')
         for c in chords:
             root = c.getElementsByTagName('root')[0].childNodes[0].data
-            specie = c.getElementsByTagName('specie')[0].childNodes[0].data
+            is_specie = c.getElementsByTagName('specie')
+            if len(is_specie[0].childNodes)>0:
+                specie = is_specie[0].childNodes[0].data
+            else:
+                specie = ''
             grade = c.getElementsByTagName('grade')[0].childNodes[0].data
             chord = Chord(root, specie, grade)
             
@@ -38,8 +42,13 @@ def load_song_from_xml(xml_path):
                 if elements:
                     setattr(chord, attr, ast.literal_eval(elements[0].childNodes[0].data))
             
+            # Add scale to chord
+            elements = c.getElementsByTagName('scale')
+            if elements:
+                scales = elements[0].childNodes[0].data
+                chord.scale = scales.split(',')
             measure.chords.append(chord)
-        
+           
         if m.getElementsByTagName('init_bar'):
             measure.init_bar = True
         

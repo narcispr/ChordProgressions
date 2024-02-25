@@ -9,7 +9,7 @@ class Render:
     def __init__(self, song:Song) -> None:
         self.song = song
         self.chord_size = 90
-        self.y_size = 120
+        self.y_size = 130
         self.text_size = 20
         self.type_offset = 5
         self.grade_offset = 50
@@ -31,19 +31,19 @@ class Render:
         y = y_ + self.bracket_offset_y
 
         if type == 0 or type == 1:
-            self.d.append(draw.Line(x1, y, x1, y+y_offset, stroke='black', stroke_width=1))
+            self.d.append(draw.Line(x1, y, x1, y+y_offset, stroke='tomato', stroke_width=1))
         if is_dashed:
-            self.d.append(draw.Line(x1, y+y_offset, x2, y+y_offset, stroke='black', stroke_width=1, stroke_dasharray='5, 5'))
+            self.d.append(draw.Line(x1, y+y_offset, x2, y+y_offset, stroke='tomato', stroke_width=1, stroke_dasharray='5, 5'))
         else:
-            self.d.append(draw.Line(x1, y+y_offset, x2, y+y_offset, stroke='black', stroke_width=1))
+            self.d.append(draw.Line(x1, y+y_offset, x2, y+y_offset, stroke='tomato', stroke_width=1))
         if type == 0 or type == 2:
-            self.d.append(draw.Line(x2, y+y_offset, x2, y, stroke='black', stroke_width=1))
+            self.d.append(draw.Line(x2, y+y_offset, x2, y, stroke='tomato', stroke_width=1))
 
     def __drawCurvedArrow__(self, x_, y_, offset, type=0, is_dashed=False):
         # Draw arrows
         y_offset = 30 
-        arrow = draw.Marker(-0.1, -0.51, 0.9, 0.5, scale=4, orient='auto')
-        arrow.append(draw.Lines(-0.1, 0.5, -0.1, -0.5, 0.9, 0, fill='black', close=True))
+        arrow = draw.Marker(-0.2, -0.75, 0.9, 0.75, scale=6, orient='auto')
+        arrow.append(draw.Lines(-0.2, 0.75, -0.2, -0.75, 0.9, 0, fill='tomato', close=True))
 
         x1 = x_ + self.text_size/2
         x2 = x_ + offset
@@ -66,9 +66,9 @@ class Render:
 
         # Draw an arbitrary path (a triangle in this case)
         if is_dashed:
-            p = draw.Path(stroke_width=1, stroke='black', fill_opacity=0.0, marker_end=arrow, stroke_dasharray='5, 5')
+            p = draw.Path(stroke_width=1, stroke='tomato', fill_opacity=0.0, marker_end=arrow, stroke_dasharray='5, 5')
         else:
-            p = draw.Path(stroke_width=1, stroke='black', fill_opacity=0.0, marker_end=arrow)
+            p = draw.Path(stroke_width=1, stroke='tomato', fill_opacity=0.0, marker_end=arrow)
         p.M(x1, y1)  # Start path 
         p.C(x1, y1, x1 + (x2-x1)/2, y_half, x2, y2)  # Draw a curve 
         self.d.append(p)
@@ -100,7 +100,7 @@ class Render:
         # draw section inside a rectangle
         self.d.append(draw.Rectangle(x-self.chord_size/4 - self.text_size*0.5, y-self.measure_size*1.8,
                                     self.text_size*1, self.text_size*0.9, 
-                                    stroke='grey', stroke_width=1, fill='lightgrey'))
+                                    stroke='grey', stroke_width=1, fill='rgba(192, 192, 192, 0.5)'))
         
         self.d.append(draw.Text(section, int(self.text_size*0.75), 
                                 x-self.chord_size/4, y-self.measure_size*1.4,
@@ -112,12 +112,12 @@ class Render:
     def __draw_chord_type__(self, x, y, chord_type, root):
         self.d.append(draw.Text(chord_type, int(self.text_size/1.5),
                                 x + int(self.text_size/1.5)*len(root) + self.type_offset, 
-                                y - self.text_size/2, center=False))
+                                y - self.text_size/2, stroke="black", center=False))
                     
     def __draw_grade__(self, x, y, grade):
-        self.d.append(draw.Text(grade, int(self.text_size/1.25),
+        self.d.append(draw.Text(grade, int(self.text_size/1.5),
                                 x + int(self.text_size/2) + len(grade), 
-                                y + self.text_size, center=True))
+                                y + self.text_size, stroke="tomato", center=True))
     def __draw_bracket__(self, x, y, current, next, is_dashed):
         line_offset, chords_offset = self.get_distance(current, next)
     
@@ -147,15 +147,15 @@ class Render:
     def __draw_new_key__(self, x, y, new_key):
         self.d.append(draw.Text(new_key+":", int(self.text_size/1.75),
                                 x + self.new_key_offset, 
-                                y + self.text_size, stroke='grey', center=True))
-        self.d.append(draw.Line(x + 2*self.new_key_offset, y + self.text_size*1.5, x, y + self.text_size*1.5, stroke='grey', stroke_width=1))
-        self.d.append(draw.Line(x + 2*self.new_key_offset, y + self.text_size*1.5, x + 2*self.new_key_offset, y + self.text_size*0.75, stroke='grey', stroke_width=1))
+                                y + self.text_size, stroke='blue', center=True))
+        self.d.append(draw.Line(x + 2*self.new_key_offset, y + self.text_size*1.5, x, y + self.text_size*1.5, stroke='blue', stroke_width=1))
+        self.d.append(draw.Line(x + 2*self.new_key_offset, y + self.text_size*1.5, x + 2*self.new_key_offset, y + self.text_size*0.75, stroke='blue', stroke_width=1))
 
     def __draw_old_key__(self, x, y, old_key):
         self.d.append(draw.Text(old_key, int(self.text_size/1.75),
                                 x + self.new_key_offset, 
-                                y + 2*self.text_size, stroke='grey', center=True))
-        self.d.append(draw.Line(x, y + self.text_size*1.5, x, y + 2.4*self.text_size, stroke='grey', stroke_width=1))
+                                y + 2*self.text_size, stroke='blue', center=True))
+        self.d.append(draw.Line(x, y + self.text_size*1.5, x, y + 2.4*self.text_size, stroke='blue', stroke_width=1))
     
     def __draw_end_bar__(self, x, y):
         self.d.append(draw.Line(x-self.chord_size/4, y-self.measure_size, 
@@ -188,7 +188,14 @@ class Render:
         self.d.append(draw.Text(str(n)+".", int(self.text_size)*0.75,
                                 x - self.chord_size/4 + self.text_size/2, y-self.measure_size*1.25, 
                                 stroke='grey', font_weight='bold', center=False))
-        
+    
+    def __draw_scales__(self, x, y, scales):
+        for i, s in enumerate(scales):
+            self.d.append(draw.Text(s, int(self.text_size/2),
+                                    x + self.text_size/2, 
+                                    y + self.text_size*2.5 + i*(self.text_size/2), 
+                                    stroke="grey", center=True))
+
     def draw(self, out_name='out'):
         self.__draw_title__((self.song.measure_per_line+1)*self.chord_size*self.song.chords_per_measure/2, self.y_size/2, 
                             self.song.title, self.song.composer)
@@ -231,6 +238,9 @@ class Render:
                         # Old key
                         # if m.chords[c].old_key is not None:
                         #     self.__draw_old_key__(x, y, m.chords[c].old_key)
+                        # Scales    
+                        if len(m.chords[c].scale) > 0:
+                            self.__draw_scales__(x, y, m.chords[c].scale)
 
                     x += self.chord_size
 
