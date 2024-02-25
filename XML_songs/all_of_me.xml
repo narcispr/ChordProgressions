@@ -1,0 +1,230 @@
+<song>
+    <title>All of Me</title>
+    <composer>Gerald Marks and Seymour Simons</composer>
+    <measures_per_line>8</measures_per_line>
+    <chords_per_measure>2</chords_per_measure>
+    <measures>
+        <!-- A Section -->
+        <measure>
+            <section>A</section>
+            <chord>
+                <root>C</root>
+                <specie>Maj</specie>
+                <grade>I</grade>
+                <new_key>C Maj</new_key>
+                <scale>C Jonica</scale>
+            </chord>
+            <init_bar/>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>E</root>
+                <specie>7</specie>
+                <grade>V/vi</grade>
+                <v_i_arrow>(4,0)</v_i_arrow>
+                <scale>E Mixo b9b13</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>V/ii</grade>
+                <v_i_arrow>(6,0)</v_i_arrow>
+                <scale>A Mixo b9b13</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-</specie>
+                <grade>ii</grade>
+                <scale>D Dorica</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>E</root>
+                <specie>7</specie>
+                <grade>V/vi</grade>
+                <v_i_arrow>(10,0)</v_i_arrow>
+                <scale>E Mixo b9b13</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>-</specie>
+                <grade>vi</grade>
+                <scale>A Eolica</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>V/V</grade>
+                <v_i_arrow>(15,0)</v_i_arrow>
+                <scale>D Mixo</scale>
+            </chord>
+        </measure>
+        <measure/>
+                <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(15,0)</ii_bracket>
+                <scale>D Dorica, G Mixo</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(16,0)</v_i_arrow>
+                <scale>G Mixo</scale>
+            </chord>
+        </measure>
+
+        <!-- B Section -->
+        <measure>
+            <section>B</section>
+            <chord>
+                <root>C</root>
+                <specie>Maj</specie>
+                <grade>I</grade>
+                <scale>C Jonica</scale>
+            </chord>
+            <init_bar/>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>E</root>
+                <specie>7</specie>
+                <grade>V/vi</grade>
+                <v_i_arrow>(20,0)</v_i_arrow>
+                <scale>E Mixo b9b13</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>V/ii</grade>
+                <v_i_arrow>(22,0)</v_i_arrow>
+                <scale>A Mixo b9b13</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-</specie>
+                <grade>ii</grade>
+                <scale>D Dorica</scale>
+            </chord>
+        </measure>
+        <measure/>
+
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>Maj7</specie>
+                <grade>IV</grade>
+                <scale>F Lidia</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>-</specie>
+                <grade>iv*</grade>
+                <scale>F Dorica</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>Maj7</specie>
+                <grade>I</grade>
+                <scale>C Jonica</scale>
+            </chord>
+            <chord>
+                <root>E</root>
+                <specie>-7</specie>
+                <grade>iii</grade>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>V/ii</grade>
+                <v_i_arrow>(28,0)</v_i_arrow>
+                <scale>A Mixo b9b13</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(29,0)</ii_bracket>
+                <scale>D Dorica, G Mixo</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(30,0)</v_i_arrow>
+                <scale>G Mixo</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>6</specie>
+                <grade>I</grade>
+                <scale>C Jonica</scale>
+            </chord>
+            </measure>
+            <measure>
+            <repeat_bar/>
+            </measure>
+
+            <!--section>T.</section>
+            <chord>
+                <root>(Eb</root>
+                <specie>º</specie>
+                <grade>biii</grade>
+            </chord>
+
+        </measure>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(31,1)</ii_bracket>
+            </chord>
+            <chord>
+                <root>G)</root>
+                <specie></specie>
+                <grade>V</grade>
+            </chord>
+            <repeat_bar/>
+            </measure-->
+    </measures>
+</song>
