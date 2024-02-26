@@ -1,8 +1,5 @@
 import drawsvg as draw
-
-from SongHarmony.song import Song
-from SongHarmony.measure import Measure
-from SongHarmony.chord import Chord
+from ChordProgressions.song import Song
 
 
 class Render:

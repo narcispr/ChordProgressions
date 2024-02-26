@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from SongHarmony.load import load_song_from_xml 
-from SongHarmony.render import Render
+from ChordProgressions.load import load_song_from_xml 
+from ChordProgressions.render import Render
 import sys
 
 if __name__ == '__main__':

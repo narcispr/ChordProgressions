@@ -1,8 +1,8 @@
 from xml.dom import minidom
 import ast
-from SongHarmony.song import Song
-from SongHarmony.measure import Measure
-from SongHarmony.chord import Chord
+from ChordProgressions.song import Song
+from ChordProgressions.measure import Measure
+from ChordProgressions.chord import Chord
 
 def load_song_from_xml(xml_path):
     song = Song()
