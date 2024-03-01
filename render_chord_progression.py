@@ -7,12 +7,14 @@ import sys
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: test.py <xml file> <output file>")
+        print("Usage: test.py <xml file> <output name without extension> <scale default=1>")
         sys.exit(1)
     song = load_song_from_xml(sys.argv[1])
     ds = Render(song)
-    if len(sys.argv) > 2:
+    if len(sys.argv) == 3:
         ds.draw(out_name=sys.argv[2])
-    else:
+    elif len(sys.argv) == 2:
         ds.draw(sys.argv[1].split('.')[0])
+    elif len(sys.argv) == 4:
+        ds.draw(sys.argv[2], float(sys.argv[3]))
     

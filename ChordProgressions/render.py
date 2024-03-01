@@ -193,7 +193,7 @@ class Render:
                                     y + self.text_size*2.5 + i*(self.text_size/2), 
                                     stroke="grey", center=True))
 
-    def draw(self, out_name='out'):
+    def draw(self, out_name='out', scale=1.0):
         self.__draw_title__((self.song.measure_per_line+1)*self.chord_size*self.song.chords_per_measure/2, self.y_size/2, 
                             self.song.title, self.song.composer)
         x = self.chord_size
@@ -254,6 +254,6 @@ class Render:
                 x = self.chord_size
                 y += self.y_size
 
-        self.d.set_pixel_scale(2)  # Set number of pixels per geometry unit
+        self.d.set_pixel_scale(scale)  # Set number of pixels per geometry unit
         self.d.save_svg(out_name + '.svg')
         self.d.save_png(out_name + '.png')
