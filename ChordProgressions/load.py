@@ -8,8 +8,14 @@ def load_song_from_xml(xml_path):
     song = Song()
     dom = minidom.parse(xml_path)
     
-    song.title = dom.getElementsByTagName('title')[0].childNodes[0].data
-    song.composer = dom.getElementsByTagName('composer')[0].childNodes[0].data
+    try:
+        song.title = dom.getElementsByTagName('title')[0].childNodes[0].data
+    except:
+        song.title = ''
+    try:
+        song.composer = dom.getElementsByTagName('composer')[0].childNodes[0].data
+    except:
+        song.composer = ''
     song.chords_per_measure = int(dom.getElementsByTagName('chords_per_measure')[0].childNodes[0].data)
     song.measure_per_line = int(dom.getElementsByTagName('measures_per_line')[0].childNodes[0].data)
     

@@ -16,11 +16,12 @@ class Render:
         self.arrow_offset_y = -30
         self.new_key_offset = -23
         
-        
+        extra = 2
+        if song.title == '' and song.composer == '':
+            extra = 0
         self.d = draw.Drawing((song.measure_per_line+1)*self.chord_size*song.chords_per_measure, 
-                              (2+len(song.measures)//song.measure_per_line)*self.y_size)
+                              (extra+len(song.measures)//song.measure_per_line)*self.y_size)
         
-
     def __drawHorizontalBracket__(self, x_, y_, offset, type=0, is_dashed=False): # type 0: normal, type 1: start, type 2: end
         y_offset = 10  # Adjust based on your coordinate system
         x1 = x_ + self.bracket_offset_x
@@ -194,10 +195,13 @@ class Render:
                                     stroke="grey", center=True))
 
     def draw(self, out_name='out', scale=1.0):
-        self.__draw_title__((self.song.measure_per_line+1)*self.chord_size*self.song.chords_per_measure/2, self.y_size/2, 
+        if self.song.title == '' and self.song.composer == '':
+            y = 0.5*self.y_size
+        else:
+            self.__draw_title__((self.song.measure_per_line+1)*self.chord_size*self.song.chords_per_measure/2, self.y_size/2, 
                             self.song.title, self.song.composer)
+            y = 1.5*self.y_size
         x = self.chord_size
-        y = 1.5*self.y_size
         for i, m in enumerate(self.song.measures):
             self.__draw_init_bar__(x, y, m.init_bar)
             if m.section is not None:
