@@ -62,6 +62,8 @@ def load_song_from_xml(xml_path):
             measure.end_bar = True
         if m.getElementsByTagName('repeat_bar'):
             measure.repeat_bar = True
+        if m.getElementsByTagName('double_bar'):
+            measure.double_bar = True
 
 
         if m.getElementsByTagName('first_end'):

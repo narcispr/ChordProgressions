@@ -20,7 +20,7 @@ class Render:
         if song.title == '' and song.composer == '':
             extra = 0
         self.d = draw.Drawing((song.measure_per_line+1)*self.chord_size*song.chords_per_measure, 
-                              (extra+len(song.measures)//song.measure_per_line)*self.y_size)
+                              (extra+len(song.measures)//song.measure_per_line)*self.y_size + self.y_size*0.15)
         
     def __drawHorizontalBracket__(self, x_, y_, offset, type=0, is_dashed=False): # type 0: normal, type 1: start, type 2: end
         y_offset = 10  # Adjust based on your coordinate system
@@ -163,16 +163,17 @@ class Render:
                                 x-self.chord_size/4 + 5, y+self.measure_size/4, 
                                 stroke='black', stroke_width=4))
     
-    def __draw_repeat_bar__(self, x, y):
+    def __draw_repeat_bar__(self, x, y, repeat=True):
         self.d.append(draw.Line(x-self.chord_size/4, y-self.measure_size, 
                                         x-self.chord_size/4, y+self.measure_size/4, 
                                         stroke='black', stroke_width=2))
         self.d.append(draw.Line(x-self.chord_size/4 + 5, y-self.measure_size, 
                                 x-self.chord_size/4 + 5, y+self.measure_size/4, 
                                 stroke='black', stroke_width=2))
-        self.d.append(draw.Text(":", int(self.text_size),
-                                x - self.chord_size/4 - self.text_size/2, 
-                                y - self.measure_size/2, center=True))
+        if repeat:
+            self.d.append(draw.Text(":", int(self.text_size),
+                                    x - self.chord_size/4 - self.text_size/2, 
+                                    y - self.measure_size/2, center=True))
     
     def __draw_n_ending__(self, x, y, n):
         self.d.append(draw.Line(x - self.chord_size/4, y-self.measure_size*1.1,  
@@ -189,9 +190,9 @@ class Render:
     
     def __draw_scales__(self, x, y, scales):
         for i, s in enumerate(scales):
-            self.d.append(draw.Text(s, int(self.text_size/2),
+            self.d.append(draw.Text(s, int(self.text_size/1.5),
                                     x + self.text_size/2, 
-                                    y + self.text_size*2.5 + i*(self.text_size/2), 
+                                    y + self.text_size*2.5 + i*(self.text_size/1.5), 
                                     stroke="grey", center=True))
 
     def draw(self, out_name='out', scale=1.0):
@@ -210,6 +211,7 @@ class Render:
                 self.__draw_n_ending__(x, y, 1) 
             elif m.second_end:
                 self.__draw_n_ending__(x, y, 2)
+            
             
             if len(m.chords) == 0:
                 self.__draw__root__(x, y, '%')
@@ -248,7 +250,9 @@ class Render:
             if m.end_bar:
                 self.__draw_end_bar__(x, y)
             elif m.repeat_bar:
-                self.__draw_repeat_bar__(x, y)
+                self.__draw_repeat_bar__(x, y, True)
+            elif m.double_bar:
+                self.__draw_repeat_bar__(x, y, False)
             
             if (i+1) % self.song.measure_per_line == 0:
                 # Draw init measure line
