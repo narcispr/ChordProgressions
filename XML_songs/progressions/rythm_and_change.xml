@@ -1,0 +1,62 @@
+<song>
+    <title>Rhythm and Change</title>
+    <composer></composer> <!-- Composer intentionally left blank -->
+    <measures_per_line>5</measures_per_line> <!-- Total number of measures -->
+    <chords_per_measure>1</chords_per_measure>
+    <measures>
+        <!-- Measure 1: E7 -->
+        <measure>
+            <chord>
+                <root>E</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(1,0)</v_i_arrow>
+                <scale>E Mixolydian</scale>
+                <new_key>A Maj</new_key>
+            </chord>
+        </measure>
+        <!-- Measure 2: A7 -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(2,0)</v_i_arrow>
+                <scale>A Mixolydian</scale>
+                <new_key>D Maj</new_key>
+            </chord>
+        </measure>
+        <!-- Measure 3: D7 -->
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(3,0)</v_i_arrow>
+                <scale>D Mixolydian</scale>
+                <new_key>G Maj</new_key>
+            </chord>
+        </measure>
+        <!-- Measure 4: G7 -->
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(4,0)</v_i_arrow>
+                <scale>G Mixolydian</scale>
+                <new_key>C Maj</new_key>
+            </chord>
+        </measure>
+        <!-- Measure 5: CMaj7 -->
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>Maj7</specie>
+                <grade>I</grade>
+                <scale>C Ionian</scale>
+            </chord>
+            <end_bar/>
+        </measure>
+    </measures>
+</song>

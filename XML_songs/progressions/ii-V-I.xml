@@ -1,0 +1,36 @@
+<song>
+    <measures_per_line>4</measures_per_line>
+    <chords_per_measure>1</chords_per_measure>
+    <measures>
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(1,0)</ii_bracket>
+                <scale>D Dòric</scale>
+                <new_key>Do M.</new_key>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(2,0)</v_i_arrow>
+                <scale>G Mixo</scale>
+            </chord>
+        </measure>
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>Maj7</specie>
+                <grade>I</grade>
+                <scale>C Jònic</scale>
+            </chord>
+        </measure>
+        <measure>
+            <end_bar/>
+        </measure>
+    </measures>
+</song>

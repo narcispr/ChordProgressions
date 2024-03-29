@@ -1,0 +1,91 @@
+<song>
+    <measures_per_line>4</measures_per_line>
+    <chords_per_measure>2</chords_per_measure>
+    <measures>
+        <!-- Measure 1: I7 -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>A Penta M/m</scale>
+            </chord>
+        </measure>
+        <!-- Measure 2: IV7 -->
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>IV</grade>
+                <scale>A Penta m (6)</scale>
+            </chord>
+        </measure>
+        <!-- Measures 3-4: I7 -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>A Penta M/m</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <!-- Measures 5-6: IV7 -->
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>IV</grade>
+                <scale>A Penta m (6)</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <!-- Measures 7-8: I7 -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>A Penta M/m</scale>
+            </chord>
+        </measure>
+        <measure/>
+        <!-- Measure 9: V7 -->
+        <measure>
+            <chord>
+                <root>E</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <scale>A/E Penta m, E Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 10: IV7 -->
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>IV</grade>
+                <scale>A Penta m (6)</scale>
+            </chord>
+        </measure>
+        <!-- Measure 11: I7 -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>A Penta M/m</scale>
+            </chord>
+        </measure>
+        <!-- Measure 12: V7 -->
+        <measure>
+            <chord>
+                <root>E</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <scale>A/E Penta m, E Mixo</scale>
+            </chord>
+            <repeat_bar/>
+        </measure>
+    </measures>
+</song>

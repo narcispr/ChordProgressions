@@ -1,0 +1,56 @@
+<song>
+    <measures_per_line>5</measures_per_line> <!-- Total measures including the empty last measure -->
+    <chords_per_measure>1</chords_per_measure>
+    <measures>
+        <!-- Measure 1: I -->
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>Maj7</specie>
+                <grade>I</grade>
+                <scale>C Jonic</scale>
+                <new_key>C Maj</new_key>
+            </chord>
+        </measure>
+        <!-- Measure 2: VI interpreted as V/ii -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>7</specie>
+                <grade>V/ii</grade>
+                <v_i_arrow>(2,0)</v_i_arrow> <!-- Indicating its function as V/ii -->
+                <scale>A Mixo b13</scale>
+            </chord>
+        </measure>
+        <!-- Measure 3: ii -->
+        <measure>
+            <chord>
+                <root>D</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(3,0)</ii_bracket>
+                <scale>D Doric</scale>
+            </chord>
+        </measure>
+        <!-- Measure 4: V -->
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(4,0)</v_i_arrow>
+                <scale>G Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 5: I -->
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>Maj7</specie>
+                <grade>I</grade>
+                <scale>C Jonic</scale>
+            </chord>
+             <end_bar/>
+        </measure>
+    </measures>
+</song>

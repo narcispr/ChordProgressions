@@ -1,0 +1,148 @@
+<song>
+    <measures_per_line>4</measures_per_line> <!-- Total number of measures -->
+    <chords_per_measure>2</chords_per_measure>
+    <measures>
+        <!-- Measure 1: I -->
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>F Penta M/m, F Mixo</scale>
+                <new_key>F Maj</new_key>
+            </chord>
+        </measure>
+        <!-- Measure 2: IV -->
+        <measure>
+            <chord>
+                <root>Bb</root>
+                <specie>7</specie>
+                <grade>IV</grade>
+                <scale>F Penta m, Bb Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 3: I -->
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>F Penta M/m, F Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 4: I -->
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>-7</specie>
+                <grade>ii ext</grade>
+                <ii_bracket>(3,1)</ii_bracket>
+                <scale>C Doric</scale>
+            </chord>
+            <chord>
+                <root>F</root>
+                <specie>7</specie>
+                <grade>V/IV</grade>
+                <scale>F Mixo</scale>
+                <v_i_arrow>(4,0)</v_i_arrow>
+            </chord>
+        </measure>
+        <!-- Measure 5: IV -->
+        <measure>
+            <chord>
+                <root>Bb</root>
+                <specie>7</specie>
+                <grade>IV</grade>
+                <scale>F Penta m, Bb Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 6: #IVº -->
+        <measure>
+            <chord>
+                <root>B</root>
+                <specie>dim</specie>
+                <grade>#IVº</grade>
+                <scale>To-Semito</scale>
+            </chord>
+        </measure>
+        <!-- Measure 7: I -->
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>F Penta M/m, F Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 8: VI (Interpreted as V/ii) -->
+        <measure>
+            <chord>
+                <root>A</root>
+                <specie>-7b5</specie>
+                <grade>ii ext</grade>
+                <ii_bracket>(7,1)</ii_bracket>
+                <scale>A Locri</scale>
+            </chord>
+            <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>V/ii</grade>
+                <v_i_arrow>(8,0)</v_i_arrow>
+                <scale>D Mixo b13</scale>
+            </chord>
+        </measure>
+        <!-- Measure 9: ii -->
+        <measure>
+            <chord>
+                <root>G</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(9,0)</ii_bracket>
+                <scale>G Doric</scale>
+            </chord>
+        </measure>
+        <!-- Measure 10: V -->
+        <measure>
+            <chord>
+                <root>C</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(10,0)</v_i_arrow>
+                <scale>C Mixo</scale>
+            </chord>
+        </measure>
+        <!-- Measure 11: I -->
+        <measure>
+            <chord>
+                <root>F</root>
+                <specie>7</specie>
+                <grade>I</grade>
+                <scale>Turnaround</scale>
+            </chord>
+             <chord>
+                <root>D</root>
+                <specie>7</specie>
+                <grade>V/ii</grade>
+                <v_i_arrow>(11,0)</v_i_arrow>
+                
+            </chord>
+        </measure>
+        <!-- Measure 12: VI (Interpreted as V/ii), ii, ending with I -->
+        <measure>
+           
+            <chord>
+                <root>G</root>
+                <specie>-7</specie>
+                <grade>ii</grade>
+                <ii_bracket>(11,1)</ii_bracket>
+            </chord>
+            <chord>
+                <root>C</root>
+                <specie>7</specie>
+                <grade>V</grade>
+                <v_i_arrow>(11,2)</v_i_arrow>
+            </chord>
+            <repeat_bar/>
+        </measure>
+    </measures>
+</song>

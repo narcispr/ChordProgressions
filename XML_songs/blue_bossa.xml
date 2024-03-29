@@ -1,7 +1,7 @@
 <song>
-    <title>Blue Bossa</title>
-    <composer>Kenny Dorham</composer>
-    <measures_per_line>4</measures_per_line>
+    <!--title>Blue Bossa</title>
+    <composer>Kenny Dorham</composer-->
+    <measures_per_line>8</measures_per_line>
     <chords_per_measure>1</chords_per_measure>
     <measures>
         <!-- A Section -->
@@ -12,6 +12,7 @@
                 <specie>-7</specie>
                 <grade>i</grade>
                 <new_key>C Min</new_key>
+                <scale>C Eolic</scale>
             </chord>
         </measure>
         <measure/>
@@ -20,6 +21,7 @@
                 <root>F</root>
                 <specie>-7</specie>
                 <grade>iv</grade>
+                <scale>F Dòric</scale>
             </chord>
         </measure>
         <measure/>
@@ -27,8 +29,9 @@
             <chord>
                 <root>D</root>
                 <specie>-7b5</specie>
-                <grade>ii°</grade>
+                <grade>ii</grade>
                 <ii_bracket>(5,0)</ii_bracket>
+                <scale>D Locri</scale>
             </chord>
         </measure>
         <measure>
@@ -37,6 +40,7 @@
                 <specie>7(b13)</specie>
                 <grade>V</grade>
                 <v_i_arrow>(6,0)</v_i_arrow>
+                <scale>G Mixo b9b13</scale>
             </chord>
         </measure>
         <measure>
@@ -44,6 +48,7 @@
                 <root>C</root>
                 <specie>-7</specie>
                 <grade>i</grade>
+                <scale>C Eolic</scale>
             </chord>
         </measure>
         <measure/>
@@ -57,6 +62,7 @@
                 <new_key>Db Maj</new_key>
                 <old_key>C Min</old_key>
                 <ii_bracket>(9,0)</ii_bracket>
+                <scale>Eb Dòric</scale>
             </chord>
         </measure>
         <measure>
@@ -65,6 +71,7 @@
                 <specie>7</specie>
                 <grade>V</grade>
                 <v_i_arrow>(10,0)</v_i_arrow>
+                <scale>Ab Mixo</scale>
             </chord>
         </measure>
         <measure>
@@ -72,6 +79,7 @@
                 <root>Db</root>
                 <specie>Maj7</specie>
                 <grade>I</grade>
+                <scale>Db Jonic</scale>
             </chord>
         </measure>
         <measure/>
@@ -79,10 +87,11 @@
             <chord>
                 <root>D</root>
                 <specie>-7b5</specie>
-                <grade>iiº</grade>
+                <grade>ii</grade>
                 <new_key>C Min</new_key>
                 <old_key>Db Maj</old_key>
                 <ii_bracket>(13,0)</ii_bracket>
+                <scale>D Locri</scale>
             </chord>
         </measure>
         <measure>
@@ -91,6 +100,7 @@
                 <specie>7</specie>
                 <grade>V</grade>
                 <v_i_arrow>(14,0)</v_i_arrow>
+                <scale>G Mixo b9b13</scale>
             </chord>
         </measure>
         <measure>
@@ -98,6 +108,7 @@
                 <root>C</root>
                 <specie>-7</specie>
                 <grade>i</grade>
+                <scale>C Eolic</scale>
             </chord>
         </measure>
         <measure>
